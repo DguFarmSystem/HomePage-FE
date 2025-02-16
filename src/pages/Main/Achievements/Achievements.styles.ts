@@ -32,7 +32,7 @@ export const Highlight = styled.span`
 
 export const SliderWrapper = styled.div<{ $isMobile: boolean; $isTablet: boolean }>`
   width: 100vw;
-  position: relative; /* 블러 효과 위치 */
+  position: relative; 
   overflow: visible; 
   z-index: 0;
 
@@ -44,7 +44,7 @@ export const SliderWrapper = styled.div<{ $isMobile: boolean; $isTablet: boolean
     width: 100vw;
     margin: 0;
     padding: 20px 0; 
-    min-height: auto; /* 높이를 자동으로 조절 -> QA 후 일부 조정 필요 */
+    min-height: auto; 
   }
 
   .slick-track {
@@ -64,7 +64,7 @@ export const SliderWrapper = styled.div<{ $isMobile: boolean; $isTablet: boolean
     content: "";
     position: absolute;
     top: 0;
-    width: ${({ $isMobile, $isTablet }) => ($isMobile ? "80px" : $isTablet ? "250px" : "400px")};
+    width: ${({ $isMobile, $isTablet }) => ($isMobile ? "90px" : $isTablet ? "250px" : "400px")};
     height: 100%;
     z-index: 1;
     pointer-events: none;

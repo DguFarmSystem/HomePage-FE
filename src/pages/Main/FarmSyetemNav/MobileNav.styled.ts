@@ -6,6 +6,7 @@ export const MobileNavbar = styled.div<{ isNavOpen: boolean }>`
   transition: max-height 0.1s ease-in-out;
 
   display: inline-flex;
+
   height: auto;
   padding: 10px 10px;
   flex-direction: column;
@@ -15,8 +16,7 @@ export const MobileNavbar = styled.div<{ isNavOpen: boolean }>`
   width: 150px;
 
   border-radius: 20px 0px 20px 20px;
-  border: 1px solid var(--FarmSystem_White, #FCFCFC);
-  background: var(--FarmSystem_Green01, #28723F);
+background: rgba(40, 114, 63, 0.7); 
 `;
 
 export const MobileNavItem = styled.a`
@@ -25,6 +25,7 @@ export const MobileNavItem = styled.a`
   align-items: center;
   gap: 3px;
   flex: 1 0 0;
+  margin-bottom: 8px;
 `;
 
 export const MobileNavText = styled.p`
@@ -37,7 +38,6 @@ export const MobileNavText = styled.p`
   letter-spacing: -0.24px;
 `;
 
-/* 확장/축소 버튼 스타일 */
 export const ExpandButton = styled.button`
   color: var(--FarmSystem_White, #FCFCFC);
   font-size: 24px;

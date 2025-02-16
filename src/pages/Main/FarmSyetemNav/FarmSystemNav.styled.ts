@@ -16,8 +16,8 @@ export const FixedNavWrapper = styled.div<FixedNavProps>`
 
 
 export const Navbar = styled.nav<{ $isMobile: boolean }>`
-  background-color: #216D35;
-  padding: 10px 20px;
+  background-color: rgba(33, 109, 53, 0.7); 
+  padding: 10px 10px;
   border-radius: 17px;
   display: flex;
   align-items: center;

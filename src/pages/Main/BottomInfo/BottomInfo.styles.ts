@@ -9,7 +9,7 @@ export const BottomInfoContainer = styled.div<{ $isMobile: boolean; $isTablet: b
 `;
 
 export const Title = styled.h2<{ $isMobile: boolean; $isTablet: boolean }>`
-  width: ${({ $isMobile }) => ($isMobile ? "98vw" : "none" )}; /*아래 정보 타이틀 사이즈 조절*/
+  width: ${({ $isMobile }) => ($isMobile ? "98vw" : "none" )}; 
   font-size: ${({ $isMobile, $isTablet }) => ($isMobile ? "22px" : $isTablet ? "32px" : "36px")};
   color: #191919;
   font-weight: bold;
@@ -64,12 +64,13 @@ export const RequirementsTitle = styled.h3<{ $isMobile: boolean; $isTablet: bool
 `;
 
 export const RequirementTitle = styled.h4<{ $isMobile: boolean }>`
-  font-size: ${({ $isMobile }) => ($isMobile ? "20px" : "24px")};
+  font-size: ${({ $isMobile }) => ($isMobile ? "18px" : "24px")};
   font-weight: bold;
 `;
 
 export const RequirementText = styled.p<{ $isMobile: boolean }>`
-  font-size: ${({ $isMobile }) => ($isMobile ? "16px" : "20px")};
+margin-top: 10px;
+  font-size: ${({ $isMobile }) => ($isMobile ? "14px" : "20px")};
   font-weight: 500;
 `;
 
@@ -115,7 +116,6 @@ export const NotificationLink = styled.a<{ $isMobile: boolean }>`
   }
 `;
 
-/* 팝업 */
 export const PopupOverlay = styled.div`
   position: fixed;
   inset: 0;

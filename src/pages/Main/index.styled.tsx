@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div<{ $isMobile: boolean }>`
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   z-index: 2;
   overflow-x: hidden;

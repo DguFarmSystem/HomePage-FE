@@ -11,8 +11,7 @@ const BottomInfo = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const { isMobile, isTablet } = useMediaQueries();
 
-  // 구글 폼 링크 (전화번호 입력 폼) 지금은 가상의 url 입니다.
-  const googleFormLink = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform";
+  const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSdaELf6PNpRSD18nPPcgH_934Wsm9Gju54P62vWlczusmRg3w/viewform";
 
   return (
     <S.BottomInfoContainer id="eligibility" $isMobile={isMobile} $isTablet={isTablet}>
@@ -38,15 +37,15 @@ const BottomInfo = () => {
       <S.RequirementsBox $isMobile={isMobile} $isTablet={isTablet}>
         <S.RequirementsTitle $isMobile={isMobile} $isTablet={isTablet}>지원 요건</S.RequirementsTitle>
         <S.RequirementItem>
-          <S.RequirementTitle $isMobile={isMobile}>🌱 누구나 환영해요!</S.RequirementTitle>
-          <S.RequirementText $isMobile={isMobile}>Farm System에 관심 있는 동국대학교 학생이라면 누구든지 참여할 수 있어요.</S.RequirementText>
+          <S.RequirementTitle $isMobile={isMobile}>- 누구나 환영해요!</S.RequirementTitle>
+          <S.RequirementText $isMobile={isMobile}>Farm System에 관심 있는 동국대학교 학생이라면 누구든지 참여할 수 있어요.🌱</S.RequirementText>
         </S.RequirementItem>
         <S.RequirementItem>
-          <S.RequirementTitle $isMobile={isMobile}>⏰ 월요일 저녁, 같이 성장해요!</S.RequirementTitle>
-          <S.RequirementText $isMobile={isMobile}>매주 월요일 19시부터 약 2시간 동안 정기 모임이 열려요. 원활한 팀워크를 위해 필참이 원칙이에요! 함께 성장할 준비되셨나요? 🌱</S.RequirementText>
+          <S.RequirementTitle $isMobile={isMobile}>- 월요일 저녁, 같이 성장해요.</S.RequirementTitle>
+          <S.RequirementText $isMobile={isMobile}>매주 월요일 19시⏰부터 약 2시간 동안 정기 모임이 열려요. 원활한 팀워크를 위해 필참이 원칙이에요! 함께 성장할 준비되셨나요? </S.RequirementText>
         </S.RequirementItem>
         <S.RequirementItem>
-          <S.RequirementTitle $isMobile={isMobile}>📅 언제 모집하나요?</S.RequirementTitle>
+          <S.RequirementTitle $isMobile={isMobile}>- 언제 모집하나요?</S.RequirementTitle>
           <S.RequirementText $isMobile={isMobile}>2025년 2월, Farm System 4기를 공개 모집할 예정이에요! 조금만 기다려 주세요 😉</S.RequirementText>
         </S.RequirementItem>
         <S.ButtonContainer>

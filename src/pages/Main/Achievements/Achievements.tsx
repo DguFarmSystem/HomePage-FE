@@ -10,31 +10,31 @@ const achievementsData = [
     id: 1,
     title: '2024 사회보장정보와 공공•민간 빅데이터 활용 국민행복서비스',
     description: '한국사회보장정보원 표창장',
-    imageUrl: 'path/to/image1.jpg',
+    imageUrl: 'https://farmsystem-bucket.s3.ap-northeast-2.amazonaws.com/award/award_2.png',
   },
   {
     id: 2,
     title: '2024 창업 아이디어 경진대회',
     description: '동국대학교 총장상(대상)',
-    imageUrl: 'path/to/image2.jpg',
+    imageUrl: 'https://farmsystem-bucket.s3.ap-northeast-2.amazonaws.com/award/award_3.png',
   },
   {
     id: 3,
     title: '2024 동국대학교 AI융합대학 해커톤',
     description: 'AI융합대학장상(대상)',
-    imageUrl: 'path/to/image3.jpg',
+    imageUrl: 'https://farmsystem-bucket.s3.ap-northeast-2.amazonaws.com/award/award_4.png',
   },
   {
     id: 4,
     title: '2024 DPG AI Challenge',
     description: '디지털플랫폼정부위원장상(최우수상)',
-    imageUrl: 'path/to/image4.jpg',
+    imageUrl: 'https://farmsystem-bucket.s3.ap-northeast-2.amazonaws.com/award/award_1.png',
   },
   {
     id: 5,
     title: '22024 E2GEE Lab(이지랩) 메이커톤',
     description: '동국대학교 총장상(대상)',
-    imageUrl: 'path/to/image4.jpg',
+    imageUrl: 'https://farmsystem-bucket.s3.ap-northeast-2.amazonaws.com/award/award_5.png',
   },
 ];
 
