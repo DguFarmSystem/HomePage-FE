@@ -3,9 +3,11 @@ import * as S from './index.styles';
 
 import BlogList from './BlogList';
 import ProjectList from './ProjectList';
+import useMediaQueries from '@/hooks/useMediaQueries';
 
 const Blog: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'blog' | 'project'>('project');
+  const { isTablet } = useMediaQueries();
 
   return (
     <>
@@ -20,12 +22,12 @@ const Blog: React.FC = () => {
         </S.ToggleButton>
       </S.ButtonContainer>
         {activeTab === 'project' && (
-          <S.ActiveTabIndicator>
+          <S.ActiveTabIndicator $isTablet={isTablet}>
             <ProjectList />
           </S.ActiveTabIndicator>
         )}
         {activeTab === 'blog' && (
-          <S.ActiveTabIndicator>
+          <S.ActiveTabIndicator $isTablet={isTablet}>
             <BlogList />
           </S.ActiveTabIndicator>
         )}

@@ -55,7 +55,7 @@ export const TagContainer = styled.div`
 `;
 
 export const Tag = styled.span`
-   background-color: var(--FarmSystem_Green04);
+   background-color: var(--FarmSystem_Green06);
    color: var(--FarmSystem_White);
 
    padding: 5px 10px;

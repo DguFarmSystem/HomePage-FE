@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
 `;
 
 // 상단 필터(기수·트랙)들을 감싸는 컨테이너
@@ -24,15 +25,13 @@ export const FilterWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  width: 120px; /* 필요에 따라 조절 */
   min-height: 80px; /* 필요에 따라 조절 */
 
 `;
 
-/** 버튼 스타일 (기수/트랙 공통) */
-export const FilterButton = styled.button`
-  background-color: var(--FarmSystem_Green04);
+/** 기수 버튼 스타일 */
+export const FilterGradeButton = styled.button`
+  background-color: var(--FarmSystem_Green06);
   color: #fff;
   padding: 8px 16px;
   border: none;
@@ -40,19 +39,42 @@ export const FilterButton = styled.button`
   cursor: pointer;
   
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
 
   margin-top: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  
+  /* 필요에 따라 hover, focus 스타일 추가 */
+  width: 100px;
+`;
+/* 트랙 버튼 스타일*/
+export const FilterTrackButton = styled.button`
+  background-color: var(--FarmSystem_Green06);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  font-size: 18px;
+  font-weight: 300;
+
+  margin-top: auto;
+  width: 150px;
+  display: inline-flex;
+  justify-content: space-between;
   
   /* 필요에 따라 hover, focus 스타일 추가 */
 `;
+
 
 /** 드롭다운 목록 컨테이너 */
 export const DropdownMenu = styled.div`
   position: absolute;
   top: 110px;     /* 버튼 아래로 살짝 떨어뜨림 */
   left: 0;
-  min-width: 120px;
+  width: 100%;
   text-align: center;
   
   background-color: #fff;
@@ -78,15 +100,42 @@ export const DropdownItem = styled.div`
 `;
 
 /** 프로젝트 리스트(카드)들을 감싸는 컨테이너 */
-export const ListContainer = styled.div`
+
+export const ListContainer = styled.div<{$isTablet: boolean; $isBig: boolean;}>`
   width: 100%;
   margin: 20px auto;
-  
-  /* 예시로 카드 3개씩 보여주는 레이아웃 */
+  min-width: ${(props) => (props.$isTablet ? '500px' : '800px')};
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  
-  /* 필요하다면 반응형 고려하여 media query 등 사용 */
+  grid-template-columns: repeat(auto-fit, 300px); /*자동 너비 조정 */
+  gap: 20px ${(props) => (props.$isTablet ? "1vw": props.$isBig ? "4vw": "10vw")};
 `;
 
+/* 비어 있을 떄 출력하는 레이아웃 잡는 컨테이너 */
+export const DescriptionContainer = styled.div`
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+`;
+
+/* 텍스트 컨테이너*/
+export const TextContainer = styled.div`
+
+  padding-top: 20vh;
+  height: 100px;
+  display: flex;
+
+  justify-content: center;
+  text-align: center;
+
+  flex-direction: column;
+  color: black;
+  font-size: 32px;
+  font-weight: 600;
+
+  a{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  gap: 10px;
+`;
