@@ -34,7 +34,7 @@ export default function Header() {
               <S.NavItem  $isTablet={isTablet} $isMobile={isMobile} onClick={() => navigate('/')}>홈</S.NavItem>
               <S.NavItem  $isTablet={isTablet} $isMobile={isMobile} onClick={() => navigate('/blog')}>블로그 / 프로젝트</S.NavItem>
               <S.NavItem  $isTablet={isTablet} $isMobile={isMobile} onClick={() => setPopupOpen(true)}>소식</S.NavItem>
-              <S.NavItem  $isTablet={isTablet} $isMobile={isMobile} onClick={() => setPopupOpen(true)}>FAQ</S.NavItem>
+              <S.NavItem  $isTablet={isTablet} $isMobile={isMobile} onClick={() => navigate('/FAQ')}>FAQ</S.NavItem>
             </S.Nav>
           </S.NavWrapper>
           <S.FarmingLogButton onClick={onContainerClick}>파밍로그</S.FarmingLogButton>
