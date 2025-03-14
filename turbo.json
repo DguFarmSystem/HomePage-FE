@@ -1,0 +1,24 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "tasks": {
+      "build": {
+        "dependsOn": ["^build"],
+        "inputs": ["$TURBO_DEFAULT$", ".env*"],
+        "outputs": [
+          "dist/**",
+          ".output/**",
+          "apps/website/dist",
+          "apps/farminglog/dist",
+          "apps/admin/dist",
+          "**/.vitepress/dist/**"
+        ]
+      },
+      "lint": {
+        "dependsOn": ["^lint"]
+      },
+      "dev": {
+        "cache": false,
+        "persistent": true
+      }
+    }
+  }

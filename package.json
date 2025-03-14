@@ -1,43 +1,19 @@
 {
-  "name": "farmsystem-homepage",
+  "name": "with-vite-react",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "type-check": "tsc --noEmit",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@types/styled-components": "^5.1.34",
-    "axios": "^1.7.9",
-    "framer-motion": "^12.4.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.4.0",
-    "react-intersection-observer": "^9.15.1",
-    "react-responsive": "^10.0.0",
-    "react-router": "^7.1.5",
-    "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.15",
-    "zod": "^3.24.2",
-    "zustand": "^5.0.3"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@types/react-slick": "^0.23.13",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.14.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "turbo": "^2.4.4"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
   }
 }

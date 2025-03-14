@@ -1,19 +1,9 @@
-# HomePage-FE🌱
-- 2025 동국대학교 Farm System 홈페이지 개발
+**Farming Log**는 Farm System의 활동을 기록하고 공유할 수 있는 "파밍로그"의 Frontend 레포입니다.
 
+---
 
 ## 📁 폴더 구조
-- 모노레포 채택
-```
-(root)/
-├─ .github/             # 깃허브 탬플릿, ci/cd를 위한 액션
-├─ apps/                # 각 웹페이지가 들어있는 폴더
-└─ packages/            # 공통로직을 담아두는 폴더
-```
 
-### 웹사이트
-- `www.farmsystem.kr`
-- 랜딩 홈페이지
 ```
 src/
 ├─ assets/                # 이미지, 폰트 등 정적 자산 관리 폴더
@@ -140,14 +130,11 @@ VITE_OTHER_CONFIG=your-config
 # 1. 레포지토리 클론
 git clone https://github.com/DguFarmSystem/FarmingLong-FE.git
 
-# 2. pnpm 설치
-npm install -g pnpm
+# 2. 패키지 설치
+npm install
 
-# 3. 패키지 설치
-pnpm install
-
-# 4. 개발 서버 실행
-pnpm run dev
+# 3. 개발 서버 실행
+npm run dev
 ```
 
 ---

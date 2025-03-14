@@ -26,13 +26,14 @@ jobs:
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://dewbeeny:${{ secrets.AUTO_ACTIONS }}@github.com/dewbeeny/HomePage-FE
-          git config user.name dewbeeny
+          git remote add forked-repo https://farmsystem-account:${{ secrets.AUTO_ACTIONS }}@github.com/farmsystem-account/HomePage-FE
+          git config user.name farmsystem-account
           git config user.email ${{ secrets.EMAIL }}
 
       - name: Push changes to forked-repo
         run: |
           git push -f forked-repo ${{ env.TARGET_BRANCH }}
+
       - name: Clean up
         run: |
           git remote remove forked-repo

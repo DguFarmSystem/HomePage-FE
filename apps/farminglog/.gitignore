@@ -1,0 +1,33 @@
+# Logs (로그 파일)
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 빌드 결과물 (컴파일된 파일)
+node_modules
+dist
+dist-ssr
+*.local
+
+# 환경 변수 파일 (.env 파일 보호)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*   # 모든 .env 파일을 포함
+
+# Editor directories and files (IDE 설정 파일)
+.vscode/*
+!.vscode/extensions.json  # 확장 목록은 공유 가능
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
