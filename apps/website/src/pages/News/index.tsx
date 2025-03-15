@@ -3,16 +3,17 @@ import { useNewsList } from '@/hooks/useNews';
 // import Logger from '@/utils/Logger';
 import * as S from './index.styled';
 import NewsItem from './NewsItem';
+import NewsItemSkeleton from './NewsItemSkeleton'
 
 
 export default function News() {
   const { isMobile } = useMediaQueries();
   const { data: newsData, loading: newsLoading, error: newsError } = useNewsList();
   
-  if (newsLoading) {
+  if (!newsLoading) {
     return (
       <S.Container>
-        <S.Message $isMobile={isMobile}>Loading...</S.Message>
+        <NewsItemSkeleton />
       </S.Container>
     );
   }
