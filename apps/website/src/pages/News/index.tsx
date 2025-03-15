@@ -10,7 +10,7 @@ export default function News() {
   const { isMobile } = useMediaQueries();
   const { data: newsData, loading: newsLoading, error: newsError } = useNewsList();
   
-  if (!newsLoading) {
+  if (newsLoading) {
     return (
       <S.Container>
         <NewsItemSkeleton />
