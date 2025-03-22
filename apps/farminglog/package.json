@@ -10,6 +10,9 @@
     "preview": "vite preview",
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {},
+"dependencies": {
+    "@repo/api": "workspace:*",
+    "@repo/auth": "workspace:*"
+  },
   "devDependencies": {}
 }

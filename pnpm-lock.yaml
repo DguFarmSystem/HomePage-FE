@@ -31,7 +31,10 @@ importers:
         version: 19.0.0(react@19.0.0)
       react-router:
         specifier: ^7.1.5
-        version: 7.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 7.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      styled-components:
+        specifier: ^6.1.15
+        version: 6.1.15(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       zustand:
         specifier: ^5.0.3
         version: 5.0.3(@types/react@19.0.12)(react@19.0.0)
@@ -96,7 +99,14 @@ importers:
         specifier: 3.2.44
         version: 3.2.44
 
-  apps/farminglog: {}
+  apps/farminglog:
+    dependencies:
+      '@repo/api':
+        specifier: workspace:*
+        version: link:../../packages/api
+      '@repo/auth':
+        specifier: workspace:*
+        version: link:../../packages/auth
 
   apps/website:
     dependencies:
@@ -169,6 +179,12 @@ importers:
         version: 6.2.1(@types/node@22.13.10)
 
   packages/api:
+    devDependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../config
+
+  packages/auth:
     devDependencies:
       '@repo/config':
         specifier: workspace:*
@@ -1750,8 +1766,8 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  react-router@7.3.0:
-    resolution: {integrity: sha512-466f2W7HIWaNXTKM5nHTqNxLrHTyXybm7R0eBlVSt0k/u55tTCDO194OIx/NrYD4TS5SXKTNekXfT37kMKUjgw==}
+  react-router@7.4.0:
+    resolution: {integrity: sha512-Y2g5ObjkvX3VFeVt+0CIPuYd9PpgqCslG7ASSIdN73LwA1nNWzcMLaoMRJfP3prZFI92svxFwbn7XkLJ+UPQ6A==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -3801,7 +3817,7 @@ snapshots:
       react: 19.0.0
       shallow-equal: 3.1.0
 
-  react-router@7.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-router@7.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@types/cookie': 0.6.0
       cookie: 1.0.2

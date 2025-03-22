@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+
 import axios from 'axios';
 
 const getApiBaseUrl = () => {

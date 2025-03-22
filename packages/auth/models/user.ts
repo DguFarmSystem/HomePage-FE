@@ -22,3 +22,9 @@ export interface UserState {
   user: User | null;
   setUser: (user: User) => void;
 }
+
+export interface UpdateUserRequest {
+  phoneNumber?: string;
+  profileImageUrl?: string;
+  major?: string;
+}
