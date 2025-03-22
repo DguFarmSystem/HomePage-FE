@@ -6,14 +6,14 @@ import useMediaQueries from '@/hooks/useMediaQueries';
 /** 샘플용 더미 데이터 */
 let blogData: BlogItemProps[];
 // 개발 모드에서만 보이게 수정했습니다.
-if (import.meta.env.MODE === 'development' || window.location.hostname.startsWith('dev.')) {
+if (import.meta.env.MODE === 'development' || window.location.hostname.startsWith('dev.') || true) {
   blogData = [
     {
       blogUrl: 'https://velog.io/',
       tags: [{ category: BlogCategory.SEMINAR }],
     },
     {
-      blogUrl: 'https://blog.naver.com/educds/222797324049',
+      blogUrl: 'https://blog.naver.com/spenne/223797840827',
       tags: [{ category: BlogCategory.PROJECT }],
     },
     {
@@ -29,7 +29,7 @@ if (import.meta.env.MODE === 'development' || window.location.hostname.startsWit
       tags: [{ category: BlogCategory.REVIEW }],
     },
     {
-      blogUrl: 'https://toss.im/',
+      blogUrl: 'https://toss.im',
       tags: [{ category: BlogCategory.LECTURE }],
     },
   ];

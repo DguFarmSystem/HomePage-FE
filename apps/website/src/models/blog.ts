@@ -37,3 +37,4 @@ enum ApiErrorMessages {
   export type BlogPOSTRequest = ApiRequest;
   export type BlogGETResponse = BlogpageResquest;
   export type BlogPOSTResponse = ApiResponse<{ blogId: number }>;
+  export type MyBlogPGetResponse = ApiResponse<BlogpageResquest>;
