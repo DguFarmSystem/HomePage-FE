@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom'; 
+import { Navigate } from 'react-router'; 
 
 interface PrivateRouteProps {
   children: React.ReactNode; // 보호할 컴포넌트 페이지

@@ -95,7 +95,7 @@ const parseHTML = (html: string, originalUrl: string): APIResponse => {
   let hostname = '';
   try {
     hostname = new URL(ogUrl).hostname;
-  } catch (e) {
+  } catch {
     hostname = ''; // URL 파싱 실패 시 빈 문자열
   }
 

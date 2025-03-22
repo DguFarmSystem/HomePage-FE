@@ -1,0 +1,30 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+@font-face {
+  font-family: "Gwangyang Touching";
+  src: url("/fonts/GwangyangTouching.ttf") format("truetype");
+  font-weight: normal;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+:root {
+/* 기본 색상 팔레트 */
+--FarmSystem_White: #FCFCFC;
+--FarmSystem_Black: #191919;
+--FarmSystem_LightGrey: #F2F2F2;
+--FarmSystem_DarkGrey: #999999;
+--FarmSystem_Yellow: #FFF763;
+--FarmSystem_Orange: #FF7F1E;
+
+/* 녹색 계열 팔레트 */
+--FarmSystem_Green01: #28723F;
+--FarmSystem_Green02: #62DE88;
+--FarmSystem_Green03: #7AB784;
+--FarmSystem_Green04: #49AA59;
+--FarmSystem_Green05: #248634;
+--FarmSystem_Green06: #006811;
+--FarmSystem_Green07: #175321;
+}

@@ -1,11 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import MainPage from './pages/Main/MainPage';
-import LoginPage from './pages/Login/LoginPage';    
-import RegisterPage from './pages/Register/RegisterPage';   
-import AuthCallback from './pages/Auth/AuthCallback';
-import AdminApplications from './pages/Admin/AdminApplications';
-import ApplicationDetail from './pages/Admin/ApplicationDetail'; 
+import Home from './pages/home'; 
+import Auth from './pages/Auth';
+import Support from './pages/cheer';
+import View from './pages/farminglog/view';
+import Create from './pages/farminglog/create';
 
 const queryClient = new QueryClient();
 
@@ -14,12 +13,11 @@ const AppRouter = () => {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/auth/callback" element={<AuthCallback />} />
-          <Route path="/admin" element={<AdminApplications />} />
-          <Route path="/admin/apply/:applyId" element={<ApplicationDetail />} /> 
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/farminglog/view" element={<View />} />
+          <Route path="/farminglog/create" element={<Create />} />
         </Routes>
       </Router>
     </QueryClientProvider>

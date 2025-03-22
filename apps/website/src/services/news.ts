@@ -1,4 +1,5 @@
-import apiConfig from "@/config/apiConfig";
+import apiConfig from "@repo/api/config/apiConfig";
+// import apiConfig from "@/config/apiConfig";
 import {
   NewsGETResponse,
   NewsIdGETResponse,
