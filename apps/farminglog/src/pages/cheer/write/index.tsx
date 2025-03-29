@@ -4,11 +4,11 @@ import Cheer from './cheer';
 
 function Main() {
   /** 검색으로 선택된 유저 이름 */
-  const [selectedUser, setSelectedUser] = useState('');
+  const [selectedUser, setSelectedUser] = useState<{ userId: number; name: string } | null>(null);
 
   /** Search 컴포넌트에서 유저를 클릭하면 setSelectedUser 갱신 */
-  const handleSelectUser = (username: string) => {
-    setSelectedUser(username);
+  const handleSelectUser = (user: { userId: number; name: string }) => {
+    setSelectedUser(user);
   };
 
   return (

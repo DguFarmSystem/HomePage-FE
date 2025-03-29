@@ -28,18 +28,18 @@ export const useSocialLoginPostMutation = () => {
 
       if (status !== 200) throw new Error("로그인 실패");
 
+      console.log("소셜 로그인 성공", data);
+
       const { accessToken, refreshToken } = data;
 
-      setToken(accessToken); 
-      
-      //refreshToken: js-cookie 저장 (HttpOnly 아니여서 추후에 보안 조치 필요)
+      setToken(accessToken);
 
       Cookies.set("refreshToken", refreshToken, {
         secure: true,
         sameSite: "Strict",
       });
 
-      return { accessToken, refreshToken };
+      return data; // ✅ 이게 중요!
     },
   });
 

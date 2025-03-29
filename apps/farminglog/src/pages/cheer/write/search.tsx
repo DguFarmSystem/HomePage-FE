@@ -29,7 +29,7 @@ const formatTrack = (track: string): string => {
 
 // 이것도 나중에 다 빼야함... 밖으로 가랏...
 interface SearchProps {
-  onSelectUser: (username: string) => void;
+  onSelectUser: (user: { userId: number; name: string }) => void;
 }
 
 export default function Search({ onSelectUser }: SearchProps) {
@@ -56,8 +56,9 @@ export default function Search({ onSelectUser }: SearchProps) {
 
   // 유저 클릭 시 
   const handleSelectItem = (user: UserInfo) => {
-    onSelectUser(user.name);
-  };
+  onSelectUser({ userId: user.userId, name: user.name });
+};
+
 
   return (
     <S.SearchContainer

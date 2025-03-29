@@ -14,20 +14,20 @@ export default function AuthPage() {
   const status = params.get('status');
   const type = params.get('type');
 
-  useEffect(() => {
-    if (status === 'not-member') {
+useEffect(() => {
+  if (status === 'not-member') {
+    setStep('not-member');
 
-      setStep('not-member');
-
-      if (type === '409') {
-        setErrorTitle('이미 다른 소셜 계정으로 가입된 사용자입니다.');
-        setErrorMessage('다른 계정으로 로그인해주세요.');
-      } 
-
-      // 쿼리 스트링 깔끔히 제거 -> 추후에 적용하고 싶으면 적용
-      // window.history.replaceState({}, '', window.location.pathname);
+    if (type === '409') {
+      setErrorTitle('이미 다른 소셜 계정으로 가입된 사용자입니다.');
+      setErrorMessage('다른 계정으로 로그인해주세요.');
+    } else {
+      // 404의 기본 메시지
+      setErrorTitle('가입되지 않은 사용자입니다.');
+      setErrorMessage('소속 정보를 확인하고 다시 시도해주세요.');
     }
-  }, [status, type, setStep, setErrorMessage]);
+  }
+}, [status, type, setStep, setErrorMessage, setErrorTitle]);
 
   return (
     <Auth>
